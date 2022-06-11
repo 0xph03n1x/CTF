@@ -1,0 +1,3 @@
+hash from hexdump on bin file = 608f8c4542c6ba43883bbff8a2cfeb69
+
+cracked pw = emerald	

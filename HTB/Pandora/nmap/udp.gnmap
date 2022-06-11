@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sat Jan 29 16:09:58 2022 as: nmap -sC -sV -sU --top-ports=20 -oA nmap/udp pandora.htb
+Host: 10.10.11.136 (pandora.htb)	Status: Up
+Host: 10.10.11.136 (pandora.htb)	Ports: 53/closed/udp//domain///, 67/closed/udp//dhcps///, 68/closed/udp//dhcpc///, 69/closed/udp//tftp///, 123/closed/udp//ntp///, 135/closed/udp//msrpc///, 137/closed/udp//netbios-ns///, 138/closed/udp//netbios-dgm///, 139/closed/udp//netbios-ssn///, 161/open/udp//snmp//SNMPv1 server; net-snmp SNMPv3 server (public)/, 162/closed/udp//snmptrap///, 445/closed/udp//microsoft-ds///, 500/closed/udp//isakmp///, 514/closed/udp//syslog///, 520/closed/udp//route///, 631/closed/udp//ipp///, 1434/closed/udp//ms-sql-m///, 1900/closed/udp//upnp///, 4500/closed/udp//nat-t-ike///, 49152/closed/udp//unknown///
+# Nmap done at Sat Jan 29 16:13:26 2022 -- 1 IP address (1 host up) scanned in 207.69 seconds

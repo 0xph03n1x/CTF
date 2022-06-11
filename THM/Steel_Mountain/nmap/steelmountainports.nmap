@@ -1,0 +1,64 @@
+# Nmap 7.91 scan initiated Thu Nov 18 06:09:56 2021 as: nmap -sC -sC -v -oA nmap/steelmountainports 10.10.136.1
+Nmap scan report for 10.10.136.1
+Host is up (0.055s latency).
+Not shown: 988 closed ports
+PORT      STATE SERVICE
+80/tcp    open  http
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: Site doesn't have a title (text/html).
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+3389/tcp  open  ms-wbt-server
+| rdp-ntlm-info: 
+|   Target_Name: STEELMOUNTAIN
+|   NetBIOS_Domain_Name: STEELMOUNTAIN
+|   NetBIOS_Computer_Name: STEELMOUNTAIN
+|   DNS_Domain_Name: steelmountain
+|   DNS_Computer_Name: steelmountain
+|   Product_Version: 6.3.9600
+|_  System_Time: 2021-11-18T11:10:01+00:00
+| ssl-cert: Subject: commonName=steelmountain
+| Issuer: commonName=steelmountain
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2021-11-17T11:08:59
+| Not valid after:  2022-05-19T11:08:59
+| MD5:   e5ea e8f5 346f c79b d832 53b6 1093 0c38
+|_SHA-1: 4a98 6dac 7adf 3a27 e7cb 12f6 e598 9a7d 7d3c 2cf8
+|_ssl-date: 2021-11-18T11:10:00+00:00; +1s from scanner time.
+8080/tcp  open  http-proxy
+|_http-favicon: Unknown favicon MD5: 759792EDD4EF8E6BC2D1877D27153CB1
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: HFS /
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49156/tcp open  unknown
+49163/tcp open  unknown
+
+Host script results:
+| nbstat: NetBIOS name: STEELMOUNTAIN, NetBIOS user: <unknown>, NetBIOS MAC: 02:38:12:cc:63:f3 (unknown)
+| Names:
+|   STEELMOUNTAIN<20>    Flags: <unique><active>
+|   STEELMOUNTAIN<00>    Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-11-18T11:10:00
+|_  start_date: 2021-11-18T11:08:52
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Thu Nov 18 06:11:41 2021 -- 1 IP address (1 host up) scanned in 105.08 seconds

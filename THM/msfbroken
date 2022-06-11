@@ -1,0 +1,3 @@
+/usr/share/metasploit-framework/modules/auxiliary/scanner/msmail/onprem_enum.go
+/usr/share/metasploit-framework/modules/auxiliary/scanner/msmail/exchange_enum.go
+/usr/share/metasploit-framework/modules/auxiliary/scanner/msmail/host_id.go

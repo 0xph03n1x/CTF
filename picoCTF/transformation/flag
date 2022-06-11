@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+
+encoded_string = "灩捯䍔䙻ㄶ形楴獟楮獴㌴摟潦弸弰㑣〷㘰摽"
+print(encoded_string.encode('utf-16-be'))

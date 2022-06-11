@@ -1,0 +1,25 @@
+# Nmap 7.91 scan initiated Fri Nov 19 21:19:17 2021 as: nmap -sC -sV -oA nmap/Fawn 10.129.30.176
+Nmap scan report for 10.129.30.176
+Host is up (0.051s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 0        0              32 Jun 04 02:25 flag.txt
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.10.14.67
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov 19 21:19:23 2021 -- 1 IP address (1 host up) scanned in 5.79 seconds

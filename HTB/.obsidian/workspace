@@ -1,0 +1,102 @@
+{
+  "main": {
+    "id": "daa782202a6e4f27",
+    "type": "split",
+    "children": [
+      {
+        "id": "400d741ab08722e6",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Paper/README.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5085457b3212f167",
+    "type": "split",
+    "children": [
+      {
+        "id": "4d9ad43ff12c00cf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "228ce2b7d54f84d8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "83586d8ee40fe619",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "200decc4f2d1f0c0",
+    "type": "split",
+    "children": [
+      {
+        "id": "f39fd9e8270c192c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "85f9e24e5098aca7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Paper/README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "400d741ab08722e6",
+  "lastOpenFiles": [
+    "Paper/README.md",
+    "Overthewire - Bandit.md",
+    "Pandora/README.md",
+    "Shibboleth/README.md",
+    "Forge/README.md",
+    "Secret/README.md",
+    "Backdoor/README.md",
+    "Driver/README.md",
+    "Previse/README.md",
+    "Previse/Untitled.md"
+  ]
+}

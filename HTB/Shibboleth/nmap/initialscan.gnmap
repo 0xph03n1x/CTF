@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Thu Dec 16 14:53:53 2021 as: nmap -sC -sV -oA nmap/initialscan 10.10.11.124
+Host: 10.10.11.124 ()	Status: Up
+Host: 10.10.11.124 ()	Ports: 80/open/tcp//http//Apache httpd 2.4.41/	Ignored State: closed (999)
+# Nmap done at Thu Dec 16 14:54:03 2021 -- 1 IP address (1 host up) scanned in 10.06 seconds

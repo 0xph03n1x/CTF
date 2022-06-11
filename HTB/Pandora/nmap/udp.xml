@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sat Jan 29 16:09:58 2022 as: nmap -sC -sV -sU -&#45;top-ports=20 -oA nmap/udp pandora.htb -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -sU -&#45;top-ports=20 -oA nmap/udp pandora.htb" start="1643465398" startstr="Sat Jan 29 16:09:58 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="20" services="53,67-69,123,135,137-139,161-162,445,500,514,520,631,1434,1900,4500,49152"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.11.136" addrtype="ipv4"/>
+<hostnames>
+<hostname name="pandora.htb" type="user"/>
+</hostnames>
+</hosthint>
+<taskprogress task="NSE" time="1643465559" percent="99.31" remaining="2" etc="1643465560"/>
+<host starttime="1643465400" endtime="1643465606"><status state="up" reason="reset" reason_ttl="63"/>
+<address addr="10.10.11.136" addrtype="ipv4"/>
+<hostnames>
+<hostname name="pandora.htb" type="user"/>
+<hostname name="pandora.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="udp" portid="53"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="udp" portid="67"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="dhcps" method="table" conf="3"/></port>
+<port protocol="udp" portid="68"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="dhcpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="69"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="tftp" method="table" conf="3"/></port>
+<port protocol="udp" portid="123"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="ntp" method="table" conf="3"/></port>
+<port protocol="udp" portid="135"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="137"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="netbios-ns" method="table" conf="3"/></port>
+<port protocol="udp" portid="138"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="netbios-dgm" method="table" conf="3"/></port>
+<port protocol="udp" portid="139"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="udp" portid="161"><state state="open" reason="udp-response" reason_ttl="63"/><service name="snmp" product="SNMPv1 server; net-snmp SNMPv3 server" extrainfo="public" hostname="pandora" method="probed" conf="10"/><script id="snmp-interfaces" output="&#xa;  lo&#xa;    IP address: 127.0.0.1  Netmask: 255.0.0.0&#xa;    Type: softwareLoopback  Speed: 10 Mbps&#xa;    Traffic stats: 307.46 Mb sent, 307.46 Mb received&#xa;  VMware VMXNET3 Ethernet Controller&#xa;    IP address: 10.10.11.136  Netmask: 255.255.254.0&#xa;    MAC address: 00:50:56:b9:c5:9a (VMware)&#xa;    Type: ethernetCsmacd  Speed: 4 Gbps&#xa;    Traffic stats: 3.99 Gb sent, 1.21 Gb received&#xa;"/><script id="snmp-processes" output="&#xa;  1: &#xa;    Name: systemd&#xa;    Path: /sbin/init&#xa;    Params: maybe-ubiquity&#xa;  2: &#xa;    Name: kthreadd&#xa;  3: &#xa;    Name: rcu_gp&#xa;  4: &#xa;    Name: rcu_par_gp&#xa;  6: &#xa;    Name: kworker/0:0H-kblockd&#xa;  9: &#xa;    Name: mm_percpu_wq&#xa;  10: &#xa;    Name: ksoftirqd/0&#xa;  11: &#xa;    Name: rcu_sched&#xa;  12: &#xa;    Name: migration/0&#xa;  13: &#xa;    Name: idle_inject/0&#xa;  14: &#xa;    Name: cpuhp/0&#xa;  15: &#xa;    Name: cpuhp/1&#xa;  16: &#xa;    Name: idle_inject/1&#xa;  17: &#xa;    Name: migration/1&#xa;  18: &#xa;    Name: ksoftirqd/1&#xa;  20: &#xa;    Name: kworker/1:0H-kblockd&#xa;  21: &#xa;    Name: kdevtmpfs&#xa;  22: &#xa;    Name: netns&#xa;  23: &#xa;    Name: rcu_tasks_kthre&#xa;  24: &#xa;    Name: kauditd&#xa;  25: &#xa;    Name: khungtaskd&#xa;  26: &#xa;    Name: oom_reaper&#xa;  27: &#xa;    Name: writeback&#xa;  28: &#xa;    Name: kcompactd0&#xa;  29: &#xa;    Name: ksmd&#xa;  30: &#xa;    Name: khugepaged&#xa;  77: &#xa;    Name: kintegrityd&#xa;  78: &#xa;    Name: kblockd&#xa;  79: &#xa;    Name: blkcg_punt_bio&#xa;  80: &#xa;    Name: tpm_dev_wq&#xa;  81: &#xa;    Name: ata_sff&#xa;  82: &#xa;    Name: md&#xa;  83: &#xa;    Name: edac-poller&#xa;  84: &#xa;    Name: devfreq_wq&#xa;  85: &#xa;    Name: watchdogd&#xa;  88: &#xa;    Name: kswapd0&#xa;  89: &#xa;    Name: ecryptfs-kthrea&#xa;  91: &#xa;    Name: kthrotld&#xa;  92: &#xa;    Name: irq/24-pciehp&#xa;  93: &#xa;    Name: irq/25-pciehp&#xa;  94: &#xa;    Name: irq/26-pciehp&#xa;  95: &#xa;    Name: irq/27-pciehp&#xa;  96: &#xa;    Name: irq/28-pciehp&#xa;  97: &#xa;    Name: irq/29-pciehp&#xa;  98: &#xa;    Name: irq/30-pciehp&#xa;  99: &#xa;    Name: irq/31-pciehp&#xa;  100: &#xa;    Name: irq/32-pciehp&#xa;  101: &#xa;    Name: irq/33-pciehp&#xa;  102: &#xa;    Name: irq/34-pciehp&#xa;  103: &#xa;    Name: irq/35-pciehp&#xa;  104: &#xa;    Name: irq/36-pciehp&#xa;  105: &#xa;    Name: irq/37-pciehp&#xa;  106: &#xa;    Name: irq/38-pciehp&#xa;  107: &#xa;    Name: irq/39-pciehp&#xa;  108: &#xa;    Name: irq/40-pciehp&#xa;  109: &#xa;    Name: irq/41-pciehp&#xa;  110: &#xa;    Name: irq/42-pciehp&#xa;  111: &#xa;    Name: irq/43-pciehp&#xa;  112: &#xa;    Name: irq/44-pciehp&#xa;  113: &#xa;    Name: irq/45-pciehp&#xa;  114: &#xa;    Name: irq/46-pciehp&#xa;  115: &#xa;    Name: irq/47-pciehp&#xa;  116: &#xa;    Name: irq/48-pciehp&#xa;  117: &#xa;    Name: irq/49-pciehp&#xa;  118: &#xa;    Name: irq/50-pciehp&#xa;  119: &#xa;    Name: irq/51-pciehp&#xa;  120: &#xa;    Name: irq/52-pciehp&#xa;  121: &#xa;    Name: irq/53-pciehp&#xa;  122: &#xa;    Name: irq/54-pciehp&#xa;  123: &#xa;    Name: irq/55-pciehp&#xa;  124: &#xa;    Name: acpi_thermal_pm&#xa;  125: &#xa;    Name: scsi_eh_0&#xa;  126: &#xa;    Name: scsi_tmf_0&#xa;  127: &#xa;    Name: scsi_eh_1&#xa;  128: &#xa;    Name: scsi_tmf_1&#xa;  130: &#xa;    Name: vfio-irqfd-clea&#xa;  131: &#xa;    Name: ipv6_addrconf&#xa;  141: &#xa;    Name: kstrp&#xa;  144: &#xa;    Name: kworker/u5:0&#xa;  157: &#xa;    Name: charger_manager&#xa;  202: &#xa;    Name: scsi_eh_2&#xa;  203: &#xa;    Name: mpt_poll_0&#xa;  204: &#xa;    Name: scsi_tmf_2&#xa;  205: &#xa;    Name: mpt/0&#xa;  206: &#xa;    Name: scsi_eh_3&#xa;  208: &#xa;    Name: scsi_tmf_3&#xa;  209: &#xa;    Name: scsi_eh_4&#xa;  210: &#xa;    Name: scsi_tmf_4&#xa;  211: &#xa;    Name: cryptd&#xa;  212: &#xa;    Name: scsi_eh_5&#xa;  217: &#xa;    Name: scsi_tmf_5&#xa;  223: &#xa;    Name: scsi_eh_6&#xa;  224: &#xa;    Name: scsi_tmf_6&#xa;  229: &#xa;    Name: scsi_eh_7&#xa;  235: &#xa;    Name: scsi_tmf_7&#xa;  238: &#xa;    Name: scsi_eh_8&#xa;  240: &#xa;    Name: scsi_tmf_8&#xa;  241: &#xa;    Name: scsi_eh_9&#xa;  243: &#xa;    Name: scsi_tmf_9&#xa;  245: &#xa;    Name: irq/16-vmwgfx&#xa;  246: &#xa;    Name: ttm_swap&#xa;  247: &#xa;    Name: scsi_eh_10&#xa;  248: &#xa;    Name: scsi_tmf_10&#xa;  251: &#xa;    Name: scsi_eh_11&#xa;  253: &#xa;    Name: scsi_tmf_11&#xa;  254: &#xa;    Name: scsi_eh_12&#xa;  255: &#xa;    Name: scsi_tmf_12&#xa;  256: &#xa;    Name: scsi_eh_13&#xa;  257: &#xa;    Name: scsi_tmf_13&#xa;  258: &#xa;    Name: scsi_eh_14&#xa;  259: &#xa;    Name: scsi_tmf_14&#xa;  260: &#xa;    Name: scsi_eh_15&#xa;  261: &#xa;    Name: scsi_tmf_15&#xa;  262: &#xa;    Name: scsi_eh_16&#xa;  263: &#xa;    Name: scsi_tmf_16&#xa;  264: &#xa;    Name: scsi_eh_17&#xa;  265: &#xa;    Name: scsi_tmf_17&#xa;  266: &#xa;    Name: scsi_eh_18&#xa;  267: &#xa;    Name: scsi_tmf_18&#xa;  268: &#xa;    Name: scsi_eh_19&#xa;  269: &#xa;    Name: scsi_tmf_19&#xa;  270: &#xa;    Name: scsi_eh_20&#xa;  271: &#xa;    Name: scsi_tmf_20&#xa;  272: &#xa;    Name: scsi_eh_21&#xa;  274: &#xa;    Name: scsi_tmf_21&#xa;  275: &#xa;    Name: scsi_eh_22&#xa;  276: &#xa;    Name: scsi_tmf_22&#xa;  277: &#xa;    Name: scsi_eh_23&#xa;  278: &#xa;    Name: scsi_tmf_23&#xa;  279: &#xa;    Name: scsi_eh_24&#xa;  280: &#xa;    Name: scsi_tmf_24&#xa;  281: &#xa;    Name: scsi_eh_25&#xa;  282: &#xa;    Name: scsi_tmf_25&#xa;  283: &#xa;    Name: scsi_eh_26&#xa;  284: &#xa;    Name: scsi_tmf_26&#xa;  285: &#xa;    Name: scsi_eh_27&#xa;  286: &#xa;    Name: scsi_tmf_27&#xa;  287: &#xa;    Name: scsi_eh_28&#xa;  288: &#xa;    Name: scsi_tmf_28&#xa;  291: &#xa;    Name: scsi_eh_29&#xa;  295: &#xa;    Name: scsi_tmf_29&#xa;  296: &#xa;    Name: scsi_eh_30&#xa;  297: &#xa;    Name: scsi_tmf_30&#xa;  299: &#xa;    Name: scsi_eh_31&#xa;  300: &#xa;    Name: scsi_tmf_31&#xa;  329: &#xa;    Name: scsi_eh_32&#xa;  330: &#xa;    Name: scsi_tmf_32&#xa;  331: &#xa;    Name: kworker/0:1H-kblockd&#xa;  342: &#xa;    Name: kdmflush&#xa;  344: &#xa;    Name: kdmflush&#xa;  375: &#xa;    Name: raid5wq&#xa;  429: &#xa;    Name: kworker/1:1H-kblockd&#xa;  430: &#xa;    Name: jbd2/dm-0-8&#xa;  431: &#xa;    Name: ext4-rsv-conver&#xa;  488: &#xa;    Name: systemd-journal&#xa;    Path: /lib/systemd/systemd-journald&#xa;  518: &#xa;    Name: systemd-udevd&#xa;    Path: /lib/systemd/systemd-udevd&#xa;  520: &#xa;    Name: systemd-network&#xa;    Path: /lib/systemd/systemd-networkd&#xa;  658: &#xa;    Name: kaluad&#xa;  659: &#xa;    Name: kmpath_rdacd&#xa;  660: &#xa;    Name: kmpathd&#xa;  661: &#xa;    Name: kmpath_handlerd&#xa;  662: &#xa;    Name: multipathd&#xa;    Path: /sbin/multipathd&#xa;    Params: -d -s&#xa;  671: &#xa;    Name: jbd2/sda2-8&#xa;  672: &#xa;    Name: ext4-rsv-conver&#xa;  691: &#xa;    Name: systemd-resolve&#xa;    Path: /lib/systemd/systemd-resolved&#xa;  692: &#xa;    Name: systemd-timesyn&#xa;    Path: /lib/systemd/systemd-timesyncd&#xa;  700: &#xa;    Name: VGAuthService&#xa;    Path: /usr/bin/VGAuthService&#xa;  705: &#xa;    Name: vmtoolsd&#xa;    Path: /usr/bin/vmtoolsd&#xa;  793: &#xa;    Name: accounts-daemon&#xa;    Path: /usr/lib/accountsservice/accounts-daemon&#xa;  794: &#xa;    Name: dbus-daemon&#xa;    Path: /usr/bin/dbus-daemon&#xa;    Params: -&#45;system -&#45;address=systemd: -&#45;nofork -&#45;nopidfile -&#45;systemd-activation -&#45;syslog-only&#xa;  800: &#xa;    Name: irqbalance&#xa;    Path: /usr/sbin/irqbalance&#xa;    Params: -&#45;foreground&#xa;  803: &#xa;    Name: networkd-dispat&#xa;    Path: /usr/bin/python3&#xa;    Params: /usr/bin/networkd-dispatcher -&#45;run-startup-triggers&#xa;  804: &#xa;    Name: rsyslogd&#xa;    Path: /usr/sbin/rsyslogd&#xa;    Params: -n -iNONE&#xa;  805: &#xa;    Name: systemd-logind&#xa;    Path: /lib/systemd/systemd-logind&#xa;  806: &#xa;    Name: udisksd&#xa;    Path: /usr/lib/udisks2/udisksd&#xa;  834: &#xa;    Name: cron&#xa;    Path: /usr/sbin/cron&#xa;    Params: -f&#xa;  836: &#xa;    Name: cron&#xa;    Path: /usr/sbin/CRON&#xa;    Params: -f&#xa;  838: &#xa;    Name: sh&#xa;    Path: /bin/sh&#xa;    Params: -c sleep 30; /bin/bash -c &apos;/usr/bin/host_check -u daniel -p HotelBabylon23&apos;&#xa;  856: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  865: &#xa;    Name: atd&#xa;    Path: /usr/sbin/atd&#xa;    Params: -f&#xa;  867: &#xa;    Name: snmpd&#xa;    Path: /usr/sbin/snmpd&#xa;    Params: -LOw -u Debian-snmp -g Debian-snmp -I -smux mteTrigger mteTriggerConf -f -p /run/snmpd.pid&#xa;  873: &#xa;    Name: sshd&#xa;    Path: sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups&#xa;  942: &#xa;    Name: polkitd&#xa;    Path: /usr/lib/policykit-1/polkitd&#xa;    Params: -&#45;no-debug&#xa;  965: &#xa;    Name: agetty&#xa;    Path: /sbin/agetty&#xa;    Params: -o -p -&#45; \u -&#45;noclear tty1 linux&#xa;  981: &#xa;    Name: mysqld&#xa;    Path: /usr/sbin/mysqld&#xa;  1194: &#xa;    Name: host_check&#xa;    Path: /usr/bin/host_check&#xa;    Params: -u daniel -p HotelBabylon23&#xa;  3730: &#xa;    Name: systemd&#xa;    Path: /lib/systemd/systemd&#xa;    Params: -&#45;user&#xa;  3733: &#xa;    Name: (sd-pam)&#xa;    Path: (sd-pam)&#xa;  4315: &#xa;    Name: chisel&#xa;    Path: ./chisel&#xa;    Params: client 10.10.14.29:8081 R:9999:localhost:80&#xa;  82706: &#xa;    Name: gpg-agent&#xa;    Path: /usr/bin/gpg-agent&#xa;    Params: -&#45;supervised&#xa;  153374: &#xa;    Name: dbus-daemon&#xa;    Path: /usr/bin/dbus-daemon&#xa;    Params: -&#45;session -&#45;address=systemd: -&#45;nofork -&#45;nopidfile -&#45;systemd-activation -&#45;syslog-only&#xa;  178586: &#xa;    Name: sshd&#xa;    Path: sshd: daniel [priv]&#xa;  178693: &#xa;    Name: sshd&#xa;    Path: sshd: daniel@pts/1&#xa;  178701: &#xa;    Name: bash&#xa;    Path: -bash&#xa;  194720: &#xa;    Name: kworker/1:2-events&#xa;  196498: &#xa;    Name: kworker/0:2-events&#xa;  197398: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  198741: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  198743: &#xa;    Name: sh&#xa;    Path: sh&#xa;    Params: -c uname -a; w; id; /bin/sh -i&#xa;  198747: &#xa;    Name: sh&#xa;    Path: /bin/sh&#xa;    Params: -i&#xa;  199094: &#xa;    Name: script&#xa;    Path: /usr/bin/script&#xa;    Params: -qc /bin/bash /dev/null&#xa;  199095: &#xa;    Name: sh&#xa;    Path: sh&#xa;    Params: -c /bin/bash&#xa;  199096: &#xa;    Name: bash&#xa;    Path: /bin/bash&#xa;  200622: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  201830: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  202366: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  210958: &#xa;    Name: sshd&#xa;    Path: sshd: daniel [priv]&#xa;  211134: &#xa;    Name: sshd&#xa;    Path: sshd: daniel@pts/4&#xa;  211135: &#xa;    Name: bash&#xa;    Path: -bash&#xa;  212551: &#xa;    Name: chisel&#xa;    Path: ./chisel&#xa;  217026: &#xa;    Name: sshd&#xa;    Path: sshd: daniel [priv]&#xa;  217111: &#xa;    Name: sshd&#xa;    Path: sshd: daniel@pts/5&#xa;  217112: &#xa;    Name: bash&#xa;    Path: -bash&#xa;  217121: &#xa;    Name: kworker/u4:1-events_power_efficient&#xa;  217157: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  217163: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  217228: &#xa;    Name: sshd&#xa;    Path: sshd: daniel [priv]&#xa;  217337: &#xa;    Name: sshd&#xa;    Path: sshd: daniel@pts/6&#xa;  217338: &#xa;    Name: bash&#xa;    Path: -bash&#xa;  217444: &#xa;    Name: sshd&#xa;  217543: &#xa;    Name: sshd&#xa;  217544: &#xa;    Name: bash&#xa;  222489: &#xa;    Name: sshd&#xa;    Path: sshd: daniel [priv]&#xa;  222505: &#xa;    Name: kworker/1:1-events&#xa;  222598: &#xa;    Name: sshd&#xa;    Path: sshd: daniel@pts/2&#xa;  222599: &#xa;    Name: bash&#xa;    Path: -bash&#xa;  233722: &#xa;    Name: sshd&#xa;    Path: sshd: daniel [priv]&#xa;  234341: &#xa;    Name: sshd&#xa;    Path: sshd: daniel@pts/8&#xa;  234342: &#xa;    Name: bash&#xa;    Path: -bash&#xa;  234977: &#xa;    Name: apache2&#xa;  234996: &#xa;    Name: chisel&#xa;  235202: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  235325: &#xa;    Name: kworker/0:0-events&#xa;  235525: &#xa;    Name: kworker/u4:0-events_power_efficient&#xa;  235577: &#xa;    Name: sshd&#xa;    Path: sshd: daniel [priv]&#xa;  235700: &#xa;    Name: sshd&#xa;    Path: sshd: daniel@pts/10&#xa;  235701: &#xa;    Name: bash&#xa;    Path: -bash&#xa;  235746: &#xa;    Name: kworker/1:0-events&#xa;  236032: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  236181: &#xa;    Name: kworker/u4:2-events_unbound&#xa;  236257: &#xa;    Name: kworker/0:1-events&#xa;  236268: &#xa;    Name: kworker/0:3&#xa;  236269: &#xa;    Name: sshd&#xa;    Path: sshd: daniel [priv]&#xa;  236346: &#xa;    Name: sshd&#xa;    Path: sshd: daniel&#xa;  236347: &#xa;    Name: chisel&#xa;    Path: ./chisel&#xa;    Params: client 10.10.14.31:1337 R:8000:127.0.0.1:80&#xa;  236360: &#xa;    Name: host_check&#xa;  236382: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  236398: &#xa;    Name: apache2&#xa;  236424: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  236426: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  236430: &#xa;    Name: apache2&#xa;  236432: &#xa;    Name: apache2"><table key="1">
+<elem key="Name">systemd</elem>
+<elem key="Path">/sbin/init</elem>
+<elem key="Params">maybe-ubiquity</elem>
+</table>
+<table key="2">
+<elem key="Name">kthreadd</elem>
+</table>
+<table key="3">
+<elem key="Name">rcu_gp</elem>
+</table>
+<table key="4">
+<elem key="Name">rcu_par_gp</elem>
+</table>
+<table key="6">
+<elem key="Name">kworker/0:0H-kblockd</elem>
+</table>
+<table key="9">
+<elem key="Name">mm_percpu_wq</elem>
+</table>
+<table key="10">
+<elem key="Name">ksoftirqd/0</elem>
+</table>
+<table key="11">
+<elem key="Name">rcu_sched</elem>
+</table>
+<table key="12">
+<elem key="Name">migration/0</elem>
+</table>
+<table key="13">
+<elem key="Name">idle_inject/0</elem>
+</table>
+<table key="14">
+<elem key="Name">cpuhp/0</elem>
+</table>
+<table key="15">
+<elem key="Name">cpuhp/1</elem>
+</table>
+<table key="16">
+<elem key="Name">idle_inject/1</elem>
+</table>
+<table key="17">
+<elem key="Name">migration/1</elem>
+</table>
+<table key="18">
+<elem key="Name">ksoftirqd/1</elem>
+</table>
+<table key="20">
+<elem key="Name">kworker/1:0H-kblockd</elem>
+</table>
+<table key="21">
+<elem key="Name">kdevtmpfs</elem>
+</table>
+<table key="22">
+<elem key="Name">netns</elem>
+</table>
+<table key="23">
+<elem key="Name">rcu_tasks_kthre</elem>
+</table>
+<table key="24">
+<elem key="Name">kauditd</elem>
+</table>
+<table key="25">
+<elem key="Name">khungtaskd</elem>
+</table>
+<table key="26">
+<elem key="Name">oom_reaper</elem>
+</table>
+<table key="27">
+<elem key="Name">writeback</elem>
+</table>
+<table key="28">
+<elem key="Name">kcompactd0</elem>
+</table>
+<table key="29">
+<elem key="Name">ksmd</elem>
+</table>
+<table key="30">
+<elem key="Name">khugepaged</elem>
+</table>
+<table key="77">
+<elem key="Name">kintegrityd</elem>
+</table>
+<table key="78">
+<elem key="Name">kblockd</elem>
+</table>
+<table key="79">
+<elem key="Name">blkcg_punt_bio</elem>
+</table>
+<table key="80">
+<elem key="Name">tpm_dev_wq</elem>
+</table>
+<table key="81">
+<elem key="Name">ata_sff</elem>
+</table>
+<table key="82">
+<elem key="Name">md</elem>
+</table>
+<table key="83">
+<elem key="Name">edac-poller</elem>
+</table>
+<table key="84">
+<elem key="Name">devfreq_wq</elem>
+</table>
+<table key="85">
+<elem key="Name">watchdogd</elem>
+</table>
+<table key="88">
+<elem key="Name">kswapd0</elem>
+</table>
+<table key="89">
+<elem key="Name">ecryptfs-kthrea</elem>
+</table>
+<table key="91">
+<elem key="Name">kthrotld</elem>
+</table>
+<table key="92">
+<elem key="Name">irq/24-pciehp</elem>
+</table>
+<table key="93">
+<elem key="Name">irq/25-pciehp</elem>
+</table>
+<table key="94">
+<elem key="Name">irq/26-pciehp</elem>
+</table>
+<table key="95">
+<elem key="Name">irq/27-pciehp</elem>
+</table>
+<table key="96">
+<elem key="Name">irq/28-pciehp</elem>
+</table>
+<table key="97">
+<elem key="Name">irq/29-pciehp</elem>
+</table>
+<table key="98">
+<elem key="Name">irq/30-pciehp</elem>
+</table>
+<table key="99">
+<elem key="Name">irq/31-pciehp</elem>
+</table>
+<table key="100">
+<elem key="Name">irq/32-pciehp</elem>
+</table>
+<table key="101">
+<elem key="Name">irq/33-pciehp</elem>
+</table>
+<table key="102">
+<elem key="Name">irq/34-pciehp</elem>
+</table>
+<table key="103">
+<elem key="Name">irq/35-pciehp</elem>
+</table>
+<table key="104">
+<elem key="Name">irq/36-pciehp</elem>
+</table>
+<table key="105">
+<elem key="Name">irq/37-pciehp</elem>
+</table>
+<table key="106">
+<elem key="Name">irq/38-pciehp</elem>
+</table>
+<table key="107">
+<elem key="Name">irq/39-pciehp</elem>
+</table>
+<table key="108">
+<elem key="Name">irq/40-pciehp</elem>
+</table>
+<table key="109">
+<elem key="Name">irq/41-pciehp</elem>
+</table>
+<table key="110">
+<elem key="Name">irq/42-pciehp</elem>
+</table>
+<table key="111">
+<elem key="Name">irq/43-pciehp</elem>
+</table>
+<table key="112">
+<elem key="Name">irq/44-pciehp</elem>
+</table>
+<table key="113">
+<elem key="Name">irq/45-pciehp</elem>
+</table>
+<table key="114">
+<elem key="Name">irq/46-pciehp</elem>
+</table>
+<table key="115">
+<elem key="Name">irq/47-pciehp</elem>
+</table>
+<table key="116">
+<elem key="Name">irq/48-pciehp</elem>
+</table>
+<table key="117">
+<elem key="Name">irq/49-pciehp</elem>
+</table>
+<table key="118">
+<elem key="Name">irq/50-pciehp</elem>
+</table>
+<table key="119">
+<elem key="Name">irq/51-pciehp</elem>
+</table>
+<table key="120">
+<elem key="Name">irq/52-pciehp</elem>
+</table>
+<table key="121">
+<elem key="Name">irq/53-pciehp</elem>
+</table>
+<table key="122">
+<elem key="Name">irq/54-pciehp</elem>
+</table>
+<table key="123">
+<elem key="Name">irq/55-pciehp</elem>
+</table>
+<table key="124">
+<elem key="Name">acpi_thermal_pm</elem>
+</table>
+<table key="125">
+<elem key="Name">scsi_eh_0</elem>
+</table>
+<table key="126">
+<elem key="Name">scsi_tmf_0</elem>
+</table>
+<table key="127">
+<elem key="Name">scsi_eh_1</elem>
+</table>
+<table key="128">
+<elem key="Name">scsi_tmf_1</elem>
+</table>
+<table key="130">
+<elem key="Name">vfio-irqfd-clea</elem>
+</table>
+<table key="131">
+<elem key="Name">ipv6_addrconf</elem>
+</table>
+<table key="141">
+<elem key="Name">kstrp</elem>
+</table>
+<table key="144">
+<elem key="Name">kworker/u5:0</elem>
+</table>
+<table key="157">
+<elem key="Name">charger_manager</elem>
+</table>
+<table key="202">
+<elem key="Name">scsi_eh_2</elem>
+</table>
+<table key="203">
+<elem key="Name">mpt_poll_0</elem>
+</table>
+<table key="204">
+<elem key="Name">scsi_tmf_2</elem>
+</table>
+<table key="205">
+<elem key="Name">mpt/0</elem>
+</table>
+<table key="206">
+<elem key="Name">scsi_eh_3</elem>
+</table>
+<table key="208">
+<elem key="Name">scsi_tmf_3</elem>
+</table>
+<table key="209">
+<elem key="Name">scsi_eh_4</elem>
+</table>
+<table key="210">
+<elem key="Name">scsi_tmf_4</elem>
+</table>
+<table key="211">
+<elem key="Name">cryptd</elem>
+</table>
+<table key="212">
+<elem key="Name">scsi_eh_5</elem>
+</table>
+<table key="217">
+<elem key="Name">scsi_tmf_5</elem>
+</table>
+<table key="223">
+<elem key="Name">scsi_eh_6</elem>
+</table>
+<table key="224">
+<elem key="Name">scsi_tmf_6</elem>
+</table>
+<table key="229">
+<elem key="Name">scsi_eh_7</elem>
+</table>
+<table key="235">
+<elem key="Name">scsi_tmf_7</elem>
+</table>
+<table key="238">
+<elem key="Name">scsi_eh_8</elem>
+</table>
+<table key="240">
+<elem key="Name">scsi_tmf_8</elem>
+</table>
+<table key="241">
+<elem key="Name">scsi_eh_9</elem>
+</table>
+<table key="243">
+<elem key="Name">scsi_tmf_9</elem>
+</table>
+<table key="245">
+<elem key="Name">irq/16-vmwgfx</elem>
+</table>
+<table key="246">
+<elem key="Name">ttm_swap</elem>
+</table>
+<table key="247">
+<elem key="Name">scsi_eh_10</elem>
+</table>
+<table key="248">
+<elem key="Name">scsi_tmf_10</elem>
+</table>
+<table key="251">
+<elem key="Name">scsi_eh_11</elem>
+</table>
+<table key="253">
+<elem key="Name">scsi_tmf_11</elem>
+</table>
+<table key="254">
+<elem key="Name">scsi_eh_12</elem>
+</table>
+<table key="255">
+<elem key="Name">scsi_tmf_12</elem>
+</table>
+<table key="256">
+<elem key="Name">scsi_eh_13</elem>
+</table>
+<table key="257">
+<elem key="Name">scsi_tmf_13</elem>
+</table>
+<table key="258">
+<elem key="Name">scsi_eh_14</elem>
+</table>
+<table key="259">
+<elem key="Name">scsi_tmf_14</elem>
+</table>
+<table key="260">
+<elem key="Name">scsi_eh_15</elem>
+</table>
+<table key="261">
+<elem key="Name">scsi_tmf_15</elem>
+</table>
+<table key="262">
+<elem key="Name">scsi_eh_16</elem>
+</table>
+<table key="263">
+<elem key="Name">scsi_tmf_16</elem>
+</table>
+<table key="264">
+<elem key="Name">scsi_eh_17</elem>
+</table>
+<table key="265">
+<elem key="Name">scsi_tmf_17</elem>
+</table>
+<table key="266">
+<elem key="Name">scsi_eh_18</elem>
+</table>
+<table key="267">
+<elem key="Name">scsi_tmf_18</elem>
+</table>
+<table key="268">
+<elem key="Name">scsi_eh_19</elem>
+</table>
+<table key="269">
+<elem key="Name">scsi_tmf_19</elem>
+</table>
+<table key="270">
+<elem key="Name">scsi_eh_20</elem>
+</table>
+<table key="271">
+<elem key="Name">scsi_tmf_20</elem>
+</table>
+<table key="272">
+<elem key="Name">scsi_eh_21</elem>
+</table>
+<table key="274">
+<elem key="Name">scsi_tmf_21</elem>
+</table>
+<table key="275">
+<elem key="Name">scsi_eh_22</elem>
+</table>
+<table key="276">
+<elem key="Name">scsi_tmf_22</elem>
+</table>
+<table key="277">
+<elem key="Name">scsi_eh_23</elem>
+</table>
+<table key="278">
+<elem key="Name">scsi_tmf_23</elem>
+</table>
+<table key="279">
+<elem key="Name">scsi_eh_24</elem>
+</table>
+<table key="280">
+<elem key="Name">scsi_tmf_24</elem>
+</table>
+<table key="281">
+<elem key="Name">scsi_eh_25</elem>
+</table>
+<table key="282">
+<elem key="Name">scsi_tmf_25</elem>
+</table>
+<table key="283">
+<elem key="Name">scsi_eh_26</elem>
+</table>
+<table key="284">
+<elem key="Name">scsi_tmf_26</elem>
+</table>
+<table key="285">
+<elem key="Name">scsi_eh_27</elem>
+</table>
+<table key="286">
+<elem key="Name">scsi_tmf_27</elem>
+</table>
+<table key="287">
+<elem key="Name">scsi_eh_28</elem>
+</table>
+<table key="288">
+<elem key="Name">scsi_tmf_28</elem>
+</table>
+<table key="291">
+<elem key="Name">scsi_eh_29</elem>
+</table>
+<table key="295">
+<elem key="Name">scsi_tmf_29</elem>
+</table>
+<table key="296">
+<elem key="Name">scsi_eh_30</elem>
+</table>
+<table key="297">
+<elem key="Name">scsi_tmf_30</elem>
+</table>
+<table key="299">
+<elem key="Name">scsi_eh_31</elem>
+</table>
+<table key="300">
+<elem key="Name">scsi_tmf_31</elem>
+</table>
+<table key="329">
+<elem key="Name">scsi_eh_32</elem>
+</table>
+<table key="330">
+<elem key="Name">scsi_tmf_32</elem>
+</table>
+<table key="331">
+<elem key="Name">kworker/0:1H-kblockd</elem>
+</table>
+<table key="342">
+<elem key="Name">kdmflush</elem>
+</table>
+<table key="344">
+<elem key="Name">kdmflush</elem>
+</table>
+<table key="375">
+<elem key="Name">raid5wq</elem>
+</table>
+<table key="429">
+<elem key="Name">kworker/1:1H-kblockd</elem>
+</table>
+<table key="430">
+<elem key="Name">jbd2/dm-0-8</elem>
+</table>
+<table key="431">
+<elem key="Name">ext4-rsv-conver</elem>
+</table>
+<table key="488">
+<elem key="Name">systemd-journal</elem>
+<elem key="Path">/lib/systemd/systemd-journald</elem>
+</table>
+<table key="518">
+<elem key="Name">systemd-udevd</elem>
+<elem key="Path">/lib/systemd/systemd-udevd</elem>
+</table>
+<table key="520">
+<elem key="Name">systemd-network</elem>
+<elem key="Path">/lib/systemd/systemd-networkd</elem>
+</table>
+<table key="658">
+<elem key="Name">kaluad</elem>
+</table>
+<table key="659">
+<elem key="Name">kmpath_rdacd</elem>
+</table>
+<table key="660">
+<elem key="Name">kmpathd</elem>
+</table>
+<table key="661">
+<elem key="Name">kmpath_handlerd</elem>
+</table>
+<table key="662">
+<elem key="Name">multipathd</elem>
+<elem key="Path">/sbin/multipathd</elem>
+<elem key="Params">-d -s</elem>
+</table>
+<table key="671">
+<elem key="Name">jbd2/sda2-8</elem>
+</table>
+<table key="672">
+<elem key="Name">ext4-rsv-conver</elem>
+</table>
+<table key="691">
+<elem key="Name">systemd-resolve</elem>
+<elem key="Path">/lib/systemd/systemd-resolved</elem>
+</table>
+<table key="692">
+<elem key="Name">systemd-timesyn</elem>
+<elem key="Path">/lib/systemd/systemd-timesyncd</elem>
+</table>
+<table key="700">
+<elem key="Name">VGAuthService</elem>
+<elem key="Path">/usr/bin/VGAuthService</elem>
+</table>
+<table key="705">
+<elem key="Name">vmtoolsd</elem>
+<elem key="Path">/usr/bin/vmtoolsd</elem>
+</table>
+<table key="793">
+<elem key="Name">accounts-daemon</elem>
+<elem key="Path">/usr/lib/accountsservice/accounts-daemon</elem>
+</table>
+<table key="794">
+<elem key="Name">dbus-daemon</elem>
+<elem key="Path">/usr/bin/dbus-daemon</elem>
+<elem key="Params">-&#45;system -&#45;address=systemd: -&#45;nofork -&#45;nopidfile -&#45;systemd-activation -&#45;syslog-only</elem>
+</table>
+<table key="800">
+<elem key="Name">irqbalance</elem>
+<elem key="Path">/usr/sbin/irqbalance</elem>
+<elem key="Params">-&#45;foreground</elem>
+</table>
+<table key="803">
+<elem key="Name">networkd-dispat</elem>
+<elem key="Path">/usr/bin/python3</elem>
+<elem key="Params">/usr/bin/networkd-dispatcher -&#45;run-startup-triggers</elem>
+</table>
+<table key="804">
+<elem key="Name">rsyslogd</elem>
+<elem key="Path">/usr/sbin/rsyslogd</elem>
+<elem key="Params">-n -iNONE</elem>
+</table>
+<table key="805">
+<elem key="Name">systemd-logind</elem>
+<elem key="Path">/lib/systemd/systemd-logind</elem>
+</table>
+<table key="806">
+<elem key="Name">udisksd</elem>
+<elem key="Path">/usr/lib/udisks2/udisksd</elem>
+</table>
+<table key="834">
+<elem key="Name">cron</elem>
+<elem key="Path">/usr/sbin/cron</elem>
+<elem key="Params">-f</elem>
+</table>
+<table key="836">
+<elem key="Name">cron</elem>
+<elem key="Path">/usr/sbin/CRON</elem>
+<elem key="Params">-f</elem>
+</table>
+<table key="838">
+<elem key="Name">sh</elem>
+<elem key="Path">/bin/sh</elem>
+<elem key="Params">-c sleep 30; /bin/bash -c &apos;/usr/bin/host_check -u daniel -p HotelBabylon23&apos;</elem>
+</table>
+<table key="856">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="865">
+<elem key="Name">atd</elem>
+<elem key="Path">/usr/sbin/atd</elem>
+<elem key="Params">-f</elem>
+</table>
+<table key="867">
+<elem key="Name">snmpd</elem>
+<elem key="Path">/usr/sbin/snmpd</elem>
+<elem key="Params">-LOw -u Debian-snmp -g Debian-snmp -I -smux mteTrigger mteTriggerConf -f -p /run/snmpd.pid</elem>
+</table>
+<table key="873">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups</elem>
+</table>
+<table key="942">
+<elem key="Name">polkitd</elem>
+<elem key="Path">/usr/lib/policykit-1/polkitd</elem>
+<elem key="Params">-&#45;no-debug</elem>
+</table>
+<table key="965">
+<elem key="Name">agetty</elem>
+<elem key="Path">/sbin/agetty</elem>
+<elem key="Params">-o -p -&#45; \u -&#45;noclear tty1 linux</elem>
+</table>
+<table key="981">
+<elem key="Name">mysqld</elem>
+<elem key="Path">/usr/sbin/mysqld</elem>
+</table>
+<table key="1194">
+<elem key="Name">host_check</elem>
+<elem key="Path">/usr/bin/host_check</elem>
+<elem key="Params">-u daniel -p HotelBabylon23</elem>
+</table>
+<table key="3730">
+<elem key="Name">systemd</elem>
+<elem key="Path">/lib/systemd/systemd</elem>
+<elem key="Params">-&#45;user</elem>
+</table>
+<table key="3733">
+<elem key="Name">(sd-pam)</elem>
+<elem key="Path">(sd-pam)</elem>
+</table>
+<table key="4315">
+<elem key="Name">chisel</elem>
+<elem key="Path">./chisel</elem>
+<elem key="Params">client 10.10.14.29:8081 R:9999:localhost:80</elem>
+</table>
+<table key="82706">
+<elem key="Name">gpg-agent</elem>
+<elem key="Path">/usr/bin/gpg-agent</elem>
+<elem key="Params">-&#45;supervised</elem>
+</table>
+<table key="153374">
+<elem key="Name">dbus-daemon</elem>
+<elem key="Path">/usr/bin/dbus-daemon</elem>
+<elem key="Params">-&#45;session -&#45;address=systemd: -&#45;nofork -&#45;nopidfile -&#45;systemd-activation -&#45;syslog-only</elem>
+</table>
+<table key="178586">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel [priv]</elem>
+</table>
+<table key="178693">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel@pts/1</elem>
+</table>
+<table key="178701">
+<elem key="Name">bash</elem>
+<elem key="Path">-bash</elem>
+</table>
+<table key="194720">
+<elem key="Name">kworker/1:2-events</elem>
+</table>
+<table key="196498">
+<elem key="Name">kworker/0:2-events</elem>
+</table>
+<table key="197398">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="198741">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="198743">
+<elem key="Name">sh</elem>
+<elem key="Path">sh</elem>
+<elem key="Params">-c uname -a; w; id; /bin/sh -i</elem>
+</table>
+<table key="198747">
+<elem key="Name">sh</elem>
+<elem key="Path">/bin/sh</elem>
+<elem key="Params">-i</elem>
+</table>
+<table key="199094">
+<elem key="Name">script</elem>
+<elem key="Path">/usr/bin/script</elem>
+<elem key="Params">-qc /bin/bash /dev/null</elem>
+</table>
+<table key="199095">
+<elem key="Name">sh</elem>
+<elem key="Path">sh</elem>
+<elem key="Params">-c /bin/bash</elem>
+</table>
+<table key="199096">
+<elem key="Name">bash</elem>
+<elem key="Path">/bin/bash</elem>
+</table>
+<table key="200622">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="201830">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="202366">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="210958">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel [priv]</elem>
+</table>
+<table key="211134">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel@pts/4</elem>
+</table>
+<table key="211135">
+<elem key="Name">bash</elem>
+<elem key="Path">-bash</elem>
+</table>
+<table key="212551">
+<elem key="Name">chisel</elem>
+<elem key="Path">./chisel</elem>
+</table>
+<table key="217026">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel [priv]</elem>
+</table>
+<table key="217111">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel@pts/5</elem>
+</table>
+<table key="217112">
+<elem key="Name">bash</elem>
+<elem key="Path">-bash</elem>
+</table>
+<table key="217121">
+<elem key="Name">kworker/u4:1-events_power_efficient</elem>
+</table>
+<table key="217157">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="217163">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="217228">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel [priv]</elem>
+</table>
+<table key="217337">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel@pts/6</elem>
+</table>
+<table key="217338">
+<elem key="Name">bash</elem>
+<elem key="Path">-bash</elem>
+</table>
+<table key="217444">
+<elem key="Name">sshd</elem>
+</table>
+<table key="217543">
+<elem key="Name">sshd</elem>
+</table>
+<table key="217544">
+<elem key="Name">bash</elem>
+</table>
+<table key="222489">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel [priv]</elem>
+</table>
+<table key="222505">
+<elem key="Name">kworker/1:1-events</elem>
+</table>
+<table key="222598">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel@pts/2</elem>
+</table>
+<table key="222599">
+<elem key="Name">bash</elem>
+<elem key="Path">-bash</elem>
+</table>
+<table key="233722">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel [priv]</elem>
+</table>
+<table key="234341">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel@pts/8</elem>
+</table>
+<table key="234342">
+<elem key="Name">bash</elem>
+<elem key="Path">-bash</elem>
+</table>
+<table key="234977">
+<elem key="Name">apache2</elem>
+</table>
+<table key="234996">
+<elem key="Name">chisel</elem>
+</table>
+<table key="235202">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="235325">
+<elem key="Name">kworker/0:0-events</elem>
+</table>
+<table key="235525">
+<elem key="Name">kworker/u4:0-events_power_efficient</elem>
+</table>
+<table key="235577">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel [priv]</elem>
+</table>
+<table key="235700">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel@pts/10</elem>
+</table>
+<table key="235701">
+<elem key="Name">bash</elem>
+<elem key="Path">-bash</elem>
+</table>
+<table key="235746">
+<elem key="Name">kworker/1:0-events</elem>
+</table>
+<table key="236032">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="236181">
+<elem key="Name">kworker/u4:2-events_unbound</elem>
+</table>
+<table key="236257">
+<elem key="Name">kworker/0:1-events</elem>
+</table>
+<table key="236268">
+<elem key="Name">kworker/0:3</elem>
+</table>
+<table key="236269">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel [priv]</elem>
+</table>
+<table key="236346">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel</elem>
+</table>
+<table key="236347">
+<elem key="Name">chisel</elem>
+<elem key="Path">./chisel</elem>
+<elem key="Params">client 10.10.14.31:1337 R:8000:127.0.0.1:80</elem>
+</table>
+<table key="236360">
+<elem key="Name">host_check</elem>
+</table>
+<table key="236382">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="236398">
+<elem key="Name">apache2</elem>
+</table>
+<table key="236424">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="236426">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="236430">
+<elem key="Name">apache2</elem>
+</table>
+<table key="236432">
+<elem key="Name">apache2</elem>
+</table>
+</script><script id="snmp-win32-software" output="ERROR: Script execution failed (use -d to debug)"/><script id="snmp-info" output="&#xa;  enterprise: net-snmp&#xa;  engineIDFormat: unknown&#xa;  engineIDData: 48fa95537765c36000000000&#xa;  snmpEngineBoots: 30&#xa;  snmpEngineTime: 4h43m02s"><elem key="enterprise">net-snmp</elem>
+<elem key="engineIDFormat">unknown</elem>
+<elem key="engineIDData">48fa95537765c36000000000</elem>
+<elem key="snmpEngineBoots">30</elem>
+<elem key="snmpEngineTime">4h43m02s</elem>
+</script><script id="snmp-sysdescr" output="Linux pandora 5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021 x86_64&#xa;  System uptime: 4h43m2.81s (1698281 timeticks)"/><script id="snmp-netstat" output="&#xa;  TCP  0.0.0.0:22           0.0.0.0:0&#xa;  TCP  10.10.11.136:22      10.10.14.31:37778&#xa;  TCP  10.10.11.136:22      10.10.14.44:44400&#xa;  TCP  10.10.11.136:22      10.10.14.229:40684&#xa;  TCP  10.10.11.136:22      10.10.16.19:56430&#xa;  TCP  10.10.11.136:22      10.10.16.19:56432&#xa;  TCP  10.10.11.136:22      10.10.16.20:58850&#xa;  TCP  10.10.11.136:22      10.10.16.20:58852&#xa;  TCP  10.10.11.136:22      10.10.16.36:42986&#xa;  TCP  10.10.11.136:22      10.10.16.42:50136&#xa;  TCP  10.10.11.136:38034   10.10.16.36:20000&#xa;  TCP  10.10.11.136:49024   10.10.16.42:2121&#xa;  TCP  10.10.11.136:52848   10.10.14.31:1337&#xa;  TCP  10.10.11.136:53776   1.1.1.1:53&#xa;  TCP  127.0.0.1:3306       0.0.0.0:0&#xa;  TCP  127.0.0.1:43008      127.0.0.1:80&#xa;  TCP  127.0.0.1:44458      127.0.0.1:80&#xa;  TCP  127.0.0.1:44536      127.0.0.1:80&#xa;  TCP  127.0.0.53:53        0.0.0.0:0&#xa;  UDP  0.0.0.0:161          *:*&#xa;  UDP  127.0.0.53:53        *:*&#xa;"/></port>
+<port protocol="udp" portid="162"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="snmptrap" method="table" conf="3"/></port>
+<port protocol="udp" portid="445"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="udp" portid="500"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="isakmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="514"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="syslog" method="table" conf="3"/></port>
+<port protocol="udp" portid="520"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="route" method="table" conf="3"/></port>
+<port protocol="udp" portid="631"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="ipp" method="table" conf="3"/></port>
+<port protocol="udp" portid="1434"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="ms-sql-m" method="table" conf="3"/></port>
+<port protocol="udp" portid="1900"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="upnp" method="table" conf="3"/></port>
+<port protocol="udp" portid="4500"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="nat-t-ike" method="table" conf="3"/></port>
+<port protocol="udp" portid="49152"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<times srtt="51082" rttvar="1273" to="100000"/>
+</host>
+<runstats><finished time="1643465606" timestr="Sat Jan 29 16:13:26 2022" summary="Nmap done at Sat Jan 29 16:13:26 2022; 1 IP address (1 host up) scanned in 207.69 seconds" elapsed="207.69" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

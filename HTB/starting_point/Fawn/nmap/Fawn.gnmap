@@ -1,0 +1,4 @@
+# Nmap 7.91 scan initiated Fri Nov 19 21:19:17 2021 as: nmap -sC -sV -oA nmap/Fawn 10.129.30.176
+Host: 10.129.30.176 ()	Status: Up
+Host: 10.129.30.176 ()	Ports: 21/open/tcp//ftp//vsftpd 3.0.3/	Ignored State: closed (999)
+# Nmap done at Fri Nov 19 21:19:23 2021 -- 1 IP address (1 host up) scanned in 5.79 seconds

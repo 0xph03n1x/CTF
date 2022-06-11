@@ -1,0 +1,26 @@
+heTfl g as iicpCTo{7F4NRP051N5_16_35P3X51N3_V9AAB1F8}7
+
+The flag is picoCTF{7R4N5P051N6_15_3XP3N51V3_A9AFB178}
+The flag is picoCTF{7R4N5P051N6_15_3X3PN51V_3A9AFB178}
+123 -> 231
+
+heT    The
+fl      fl
+g a    ag 
+s i    is 
+icp    pic
+CTo    oCT
+{7F    F{7
+4NR    R4N
+P05    5P0
+1N5    51N
+_16    6_1
+_35    5_3
+P3X    X3P
+51N    N51
+3_V    V_3
+9AA    A9A
+B1F    FB1
+8}7    78}
+
+The flag is picoCTF{7R4N5P051N6_15_3X3PN51V_3A9AFB178}

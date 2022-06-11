@@ -1,0 +1,4 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+22:56:10	170/170	---M--	500	error ('Internal%20Server%20Error')	text/html	date:Thu,%2017%20Mar%202022%2020:56:10%20GMT	http://saturn.picoctf.net:50303/robots.txt		(from )
+22:56:10	654/654	---MCZ	200	added ('OK')	text/html	date:Thu,%2017%20Mar%202022%2020:56:10%20GMT	http://saturn.picoctf.net:50303/	saturn.picoctf.net_50303/index.html	(from )
+22:56:11	41/41	---M--	200	added ('OK')	text/css	etag:%226230324a-29%22	http://saturn.picoctf.net:50303/style.css	saturn.picoctf.net_50303/style.css	(from http://saturn.picoctf.net:50303/)

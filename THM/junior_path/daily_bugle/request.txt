@@ -1,0 +1,11 @@
+GET /administrator/ HTTP/1.1
+Host: 10.10.249.90
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: close
+Cookie: eaa83fe8b963ab08ce9ab7d4a798de05=al3st6p13io0oq0v1l2roi0a72; 2b01af51830ca9615359108de04d9ca1=as5ss111tio6bc0j4sfa9rnki2
+Upgrade-Insecure-Requests: 1
+
+

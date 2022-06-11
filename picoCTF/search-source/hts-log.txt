@@ -1,0 +1,14 @@
+HTTrack3.49-2+libhtsjava.so.2 launched on Thu, 17 Mar 2022 18:46:11 at http://saturn.picoctf.net:61941/
+(httrack http://saturn.picoctf.net:61941/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:46:49	Error: 	"Not Found" (404) at link saturn.picoctf.net:61941/images/maps-and-flags.png (from saturn.picoctf.net:61941/)
+18:46:49	Error: 	"Not Found" (404) at link saturn.picoctf.net:61941/css/owl.video.play.png (from saturn.picoctf.net:61941/css/owl.carousel.min.css)
+18:46:49	Error: 	"Not Found" (404) at link saturn.picoctf.net:61941/images/fevicon.png (from saturn.picoctf.net:61941/css/style.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 38 seconds : 25 links scanned, 21 files written (686328 bytes overall) [692704 bytes received at 18229 bytes/sec], 6.2 requests per connection
+(3 errors, 0 warnings, 0 messages)

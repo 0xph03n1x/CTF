@@ -1,0 +1,4 @@
+# Nmap 7.91 scan initiated Fri Nov 19 15:02:23 2021 as: nmap -sC -sV -oA 10.10.141.116 nmap/hackpark
+Unable to split netmask from target expression: "nmap/hackpark"
+WARNING: No targets were specified, so 0 hosts scanned.
+# Nmap done at Fri Nov 19 15:02:24 2021 -- 0 IP addresses (0 hosts up) scanned in 1.25 seconds
